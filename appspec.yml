@@ -1,10 +1,16 @@
 version: 0.0
 os: linux
 files:
-  - source: /build/libs/myapp-0.0.1-SNAPSHOT.jar
+  - source: /build/libs/sns-0.0.1-SNAPSHOT.jar
     destination: /opt/app
 hooks:
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
       runas: ubuntu
+permissions:
+  - object: scripts/start.sh
+    pattern: "**"
+    mode: 755
+    type:
+      - file
