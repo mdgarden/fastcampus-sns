@@ -1,0 +1,11 @@
+name: Deploy Workflow on prod envvironment
+
+on:
+  pull_request: :
+    branchs: [main]
+      types: [closed]
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    environment: production
