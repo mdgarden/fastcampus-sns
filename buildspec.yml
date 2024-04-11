@@ -17,3 +17,5 @@ artifacts:
     - build/libs/sns-0.0.1-SNAPSHOT.jar
     - scripts/start.sh
     - appspec.yml
+  discard-paths: no
+
